@@ -1,0 +1,188 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "my-font";
+  src: url(../assets/fonts/static/HankenGrotesk-Bold.ttf),
+    url(../assets/fonts/static/HankenGrotesk-ExtraBold.ttf),
+    url(../assets/fonts/static/HankenGrotesk-Medium.ttf);
+}
+section {
+  width: 100%;
+  background-color: hsl(221, 100%, 96%);
+}
+.container {
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  min-height: 100vh;
+  font-family: "my-font";
+}
+.component {
+  display: flex;
+  width: 800px;
+  flex-wrap: wrap;
+}
+.component > div {
+  width: calc(100% / 2);
+}
+.component .result-card {
+  text-align: center;
+  padding: 50px;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  border-radius: 30px;
+  position: relative;
+  z-index: 2;
+}
+.result-card h3 {
+  color: hsl(241, 100%, 89%);
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+.result-circle {
+  background-image: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.result-circle h1 {
+  font-size: 80px;
+  font-weight: 800;
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+}
+.result-circle p {
+  font-size: 18px;
+  color: hsl(241, 100%, 89%);
+}
+
+.result-card h2 {
+  font-size: 40px;
+  text-transform: capitalize;
+  margin: 30px auto;
+  width: fit-content;
+  color: hsl(221, 100%, 96%);
+}
+.result-card > p {
+  font-size: 18px;
+  color: hsl(241, 100%, 89%);
+  width: 250px;
+  margin: 0 auto;
+}
+.summary-card {
+  background-color: hsl(0, 0%, 100%);
+  padding: 50px 30px 50px 50px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: relative;
+  left: -15px;
+  z-index: 1;
+}
+.summary-card h3 {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: hsl(222, 11%, 30%);
+}
+.summary-card > div {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-transform: capitalize;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+.one {
+  background-color: hsl(6, 100%, 98%);
+  color: hsl(6, 100%, 45%);
+}
+.two {
+  background-color: hsl(45, 100%, 95%);
+  color: hsl(45, 100%, 45%);
+}
+.three {
+  background-color: hsl(171, 100%, 97%);
+  color: hsl(171, 100%, 45%);
+}
+.four,
+.four svg {
+  background-color: hsl(240, 71%, 97%);
+  color: hsl(240, 71%, 45%);
+}
+svg {
+  margin-right: 15px;
+}
+button {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  background-color: hsl(224, 30%, 27%);
+  border-radius: 25px;
+  margin-top: 25px;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: hsl(221, 100%, 96%);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:active {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+}
+.span {
+  position: absolute;
+  right: 15px;
+  color: hsl(241, 100%, 89%);
+}
+.span .active {
+  color: hsl(224, 30%, 27%);
+  margin-right: 2px;
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 0;
+  }
+  .component {
+    flex-wrap: wrap;
+  }
+  .component > div {
+    width: 100%;
+  }
+  .result-card {
+    top: -30px;
+  }
+  .summary-card {
+    left: 0;
+    top: -50px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 30px;
+  }
+}
